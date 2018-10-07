@@ -1,0 +1,51 @@
+import java.lang.*; 
+import java.io.*; 
+import java.util.Scanner;
+class Tulostaja {
+	
+	Scanner lukija = new Scanner(System.in);
+
+	String isotPienet(String merkkijono) {
+		
+		String ip;
+		
+		 System.out.print("Minkälaisina kirjaimina haluat merkkijonon (isot/pienet): "); 
+		 ip = lukija.nextLine();
+		
+		if (ip == "pienet") {
+			System.out.print(ip.toLowerCase() );
+		}
+		else if (ip == "isot") {
+			System.out.print(ip.toUpperCase());
+		}
+		return merkkijono;
+	}
+	
+
+	public void takaperinHarva(String merkkijono) {
+		
+		
+		String reverse;
+		System.out.print("Miten haluat merkkijonon tulostettavan (takaperin/harvana): "); 
+		reverse = lukija.nextLine();
+		
+		
+		byte [] strAsByteArray = reverse.getBytes(); 
+		  
+	    byte [] result = new byte [strAsByteArray.length]; 
+	  
+	    for (int i = 0; i<strAsByteArray.length; i++) 
+	    		result[i] =  strAsByteArray[strAsByteArray.length-i-1];
+		 
+		
+		 if (reverse == "takaperin") {
+			 
+		 }
+		
+	        else if (reverse == "harava") {
+	        	
+	}
+		
+		 System.out.println("Tässä on merkkijonosi: " +merkkijono );
+	}
+	}
