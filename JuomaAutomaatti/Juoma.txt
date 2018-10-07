@@ -1,51 +1,118 @@
-import java.lang.*; 
-import java.io.*; 
-import java.util.Scanner;
-class Tulostaja {
-	
-	Scanner lukija = new Scanner(System.in);
+package juomaAutomaatti; 
 
-	String isotPienet(String merkkijono) {
+public class juoma {
+	
+	
+	
+	private int tee = 50;
+	private int kahvi = 50;
+	private int kaakao = 50;
+
+
+	public int getTee() {
+		return tee;
+	}
+
+
+
+
+	public void setTee(int tee) {
+		this.tee = tee;
+	}
+
+
+
+
+	public int getKahvi() {
+		return kahvi;
+	}
+
+
+
+
+	public void setKahvi(int kahvi) {
+		this.kahvi = kahvi;
+	}
+
+
+
+
+	public int getKaakao() {
+		return kaakao;
+	}
+
+
+
+
+	public void setKaakao(int kaakao) {
+		this.kaakao = kaakao;
+	}
+
+
+	public static void main(String[] args) {
 		
-		String ip;
-		
-		 System.out.print("Minkälaisina kirjaimina haluat merkkijonon (isot/pienet): "); 
-		 ip = lukija.nextLine();
-		
-		if (ip == "pienet") {
-			System.out.print(ip.toLowerCase() );
-		}
-		else if (ip == "isot") {
-			System.out.print(ip.toUpperCase());
-		}
-		return merkkijono;
+
+	}
+
+
+	public void valmistaKahvi() {
+		if (kahvi <= 0) {
+			System.out.println("Tuoteloppu!");
+			System.out.println("Valitse toinen juoma...");
+			System.out.println("Tai lopeta painamalla 4 \n");
+			return;
+		}else
+		; this.kahvi-=10;
+	
 	}
 	
+	public void valmistaTee() {
+		if (tee <= 0) {
+			System.out.println("Tuoteloppu!");
+			System.out.println("Valitse toinen juoma...");
+			System.out.println("Tai lopeta painamalla 4 \n");
+			return;
+		}else	
+		; this.tee-=10;	
+		return;
+	}
+	
+	public void valmistaKaakao() {
+		if (kaakao <= 0) {
+			System.out.println("Tuoteloppu!");
+			System.out.println("Valitse toinen juoma...");
+			System.out.println("Tai lopeta painamalla 4\n");
+			return;
+		}else	
+		; this.kaakao-=10;
+	}
 
-	public void takaperinHarva(String merkkijono) {
+	public void valmistaLopeta() {
+		System.out.println("Lämpimiä ja nautinnollisia juoma hetkiä :) ");
+		System.exit(0);
 		
-		
-		String reverse;
-		System.out.print("Miten haluat merkkijonon tulostettavan (takaperin/harvana): "); 
-		reverse = lukija.nextLine();
-		
-		
-		byte [] strAsByteArray = reverse.getBytes(); 
-		  
-	    byte [] result = new byte [strAsByteArray.length]; 
-	  
-	    for (int i = 0; i<strAsByteArray.length; i++) 
-	    		result[i] =  strAsByteArray[strAsByteArray.length-i-1];
-		 
-		
-		 if (reverse == "takaperin") {
-			 
-		 }
-		
-	        else if (reverse == "harava") {
-	        	
 	}
+
+
+	public boolean onnistuuko() {
+		int luku = (int)(Math.random() * 100+1) ;	
+		if(luku <= 25 && luku > 0 ) {
+		return false;
+		}
 		
-		 System.out.println("Tässä on merkkijonosi: " +merkkijono );
+		else return true;
+				
+	} 
+	
+
+	@Override
+	public String toString() {
+		return "Teetä jäljellä: " + tee + " Kahvia jäljellä: " + kahvi + " Kaakaota jäljellä " + kaakao +"\n" ;
 	}
-	}
+
+
+	
+
+	
+
+}
