@@ -3,7 +3,7 @@ package juomaAutomaatti;
 public class juoma {
 	
 	
-	
+	// Konstruktori puuttuu Eli muuttujien määrittelä tulisi olla public juoma() -nimisen rakenteen sisällä
 	private int tee = 50;
 	private int kahvi = 50;
 	private int kaakao = 50;
@@ -49,7 +49,7 @@ public class juoma {
 	}
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { // main -metodi on turha täällä
 		
 
 	}
@@ -62,7 +62,7 @@ public class juoma {
 			System.out.println("Tai lopeta painamalla 4 \n");
 			return;
 		}else
-		; this.kahvi-=10;
+		; this.kahvi-=10; // Tässä on turha puolipiste. Se itseasiassa päättää else lauseen ja kahvia vähennetään joka tapauksessa, riippumatta if-lauseen vertailusta
 	
 	}
 	
@@ -72,7 +72,7 @@ public class juoma {
 			System.out.println("Valitse toinen juoma...");
 			System.out.println("Tai lopeta painamalla 4 \n");
 			return;
-		}else	
+		}else	// Tässä on turha puolipiste. Se itseasiassa päättää else lauseen ja kahvia vähennetään joka tapauksessa, riippumatta if-lauseen vertailusta
 		; this.tee-=10;	
 		return;
 	}
@@ -84,11 +84,11 @@ public class juoma {
 			System.out.println("Tai lopeta painamalla 4\n");
 			return;
 		}else	
-		; this.kaakao-=10;
+		; this.kaakao-=10; // Tässä on turha puolipiste. Se itseasiassa päättää else lauseen ja kahvia vähennetään joka tapauksessa, riippumatta if-lauseen vertailusta
 	}
 
 	public void valmistaLopeta() {
-		System.out.println("L�mpimi� ja nautinnollisia juoma hetki� :) ");
+		System.out.println("Lämpimiä ja nautinnollisia juoma hetkiä :) ");
 		System.exit(0);
 		
 	}
@@ -107,7 +107,7 @@ public class juoma {
 
 	@Override
 	public String toString() {
-		return "Teet� j�ljell�: " + tee + " Kahvia j�ljell�: " + kahvi + " Kaakaota j�ljell� " + kaakao +"\n" ;
+		return "Teetä jäljellä: " + tee + " Kahvia jäljellä: " + kahvi + " Kaakaota jäljellä " + kaakao +"\n" ;
 	}
 
 
