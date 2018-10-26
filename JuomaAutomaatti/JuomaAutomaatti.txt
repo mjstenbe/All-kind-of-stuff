@@ -12,7 +12,7 @@ public class juomaAutomaatti {
 		Scanner lukija = new Scanner(System.in);
 		
 		
-		for (int i = 0 ; i < 100; i++) {
+		for (int i = 0 ; i < 100; i++) { // Vähän kehno ratkaisu tuo 100 kertaa toistuva silmukka. :) Olisit voinut laittaa vaikka while silmukan ja ehdoksi nuo käyttäjän syöttämät arvot, jolloin 4 poistuu silmukusta
 		System.out.println("******Juoma-Automaatti*******");
 		System.out.println();
 		System.out.println("1. Kahvi\r\n" + "2. Tee\r\n" + "3. Kaakao\r\n" + "4. Lopeta\r\n");
@@ -21,7 +21,7 @@ public class juomaAutomaatti {
 		int juoma = lukija.nextInt();
 		
 		
-		if (omaKone.onnistuuko() == false) {
+		if (omaKone.onnistuuko() == false) { // Tämän voisit testata myös if (!omaKone.onnistuuko() )
 			System.out.println("Ooops... Kiitos lahjoituksesta!");
 			break;
 			
@@ -48,7 +48,7 @@ public class juomaAutomaatti {
 			omaKone.valmistaLopeta();
 		}
 		else if (juoma < 0 || juoma > 4) {
-			System.out.println("V��r� valinta kokeile uudelleen");
+			System.out.println("Väärä valinta kokeile uudelleen");
 		}
 		
 		System.out.println(omaKone);
